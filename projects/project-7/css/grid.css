@@ -1,0 +1,98 @@
+/* =====================================
+   Grid Layout 1
+======================================== */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main";
+}
+header {
+  grid-area: header;
+  border-bottom: solid lightgrey 2px;
+}
+nav {
+  grid-area: nav;
+  border-right: solid lightgrey 2px;
+}
+main {
+  grid-area: main;
+}
+
+/* =====================================
+   Grid Layout 2
+======================================== */
+
+.grid-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 300px) 420px 420px repeat(2, 280px);
+  grid-template-areas:
+    "traffic" "daily" "mobile" "social"
+    "newMembers" "recent" "message" "settings";
+}
+.traffic {
+  grid-area: traffic;
+}
+.daily-traffic {
+  grid-area: daily;
+}
+.mobile-users {
+  grid-area: mobile;
+}
+.social-stats {
+  grid-area: social;
+}
+.new-members {
+  grid-area: newMembers;
+}
+.recent-activity {
+  grid-area: recent;
+}
+.message-user {
+  grid-area: message;
+}
+.settings {
+  grid-area: settings;
+}
+
+@media (min-width: 769px) {
+  .container {
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+      "header header header"
+      "nav main main";
+  }
+
+  .grid-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 310px) 420px 300px;
+    grid-template-areas:
+      "traffic traffic"
+      "daily mobile"
+      "social social"
+      "newMembers recent"
+      "message settings";
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 310px) 400px 300px;
+    grid-template-areas:
+      "traffic traffic"
+      "daily mobile"
+      "social social"
+      "newMembers recent"
+      "message settings";
+  }
+}

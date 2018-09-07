@@ -1,0 +1,154 @@
+/* =====================================
+   Page Styles
+======================================== */
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  padding: 30px;
+  text-align: left;
+}
+
+h1  {
+  text-transform: uppercase;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+img {
+  border-radius: 50%;
+}
+
+/* =====================================
+   Header
+======================================== */
+.search-box {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* =====================================
+   Main Content
+======================================== */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 30px;
+  text-align: center;
+}
+.user-card {
+  transition: background-color .5s;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+.user-card:hover {
+  background-color: powderblue;
+}
+.user-name {
+  font-size: 1.2em;
+}
+.user-email, .user-city {
+  font-size: .9em;
+  color: grey;
+}
+
+.user {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+.overlay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 60px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  height: 75%;
+  background-color: white;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+.left-button, .right-button {
+  font-size: 3em;
+}
+.overlay img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+.overlay hr {
+  width: 100%;
+}
+.exit-button {
+  font-size: 1.5em;
+  text-align: right;
+}
+
+/* =====================================
+   Media Queries
+======================================== */
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 30px;
+  }
+  .user-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "image info";
+  }
+  .overlay {
+    width: 50%;
+  }
+  .user-image {
+    grid-area: image;
+    margin: auto 0;
+    width: 100px;
+    height: 100px;
+  }
+  .info {
+    grid-area: info;
+  }
+}
+
+@media (min-width: 1024px) {
+  .search-box {
+    width: 50%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .user-card {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .overlay {
+    width: 30%;
+    height: 70%;
+  }
+}
