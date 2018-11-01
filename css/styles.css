@@ -28,60 +28,130 @@ main {
 .main-header {
   display: flex;
   flex-direction: column;
-  background-color: #f9f9f9;
-  height: 60vh;
+  background-color: #150c14;
+  height: 100vh;
+}
+
+.front-page {
+  max-width: 1122px;
+  margin: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-align: left;
 }
 
 .wrap {
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 1.4em;
-  margin: auto;
-  color: #000;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 1.5em;
+  color: #ffc107;
+}
+
+.explain p {
+  font-family: 'Cabin Sketch', cursive;
+  color: #fff;
+  font-size: 1.1em;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  padding-right: 3em;
+
+}
+
+.explain a {
+  color: #ffc107;
+}
+
+.btn {
+  background-color: #150c14;
+  color: #ffc107;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 1.2em;
+  padding: 0.5em;
 }
 
 /* =====================================
    Navigation
 ======================================== */
 
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #000;
-  padding: 1em 2em;
+.navbar-brand {
+  font-size: 2.2em;
 }
 
-.nav-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.main-nav a {
-  transition: color .5s;
-  font-family: 'Indie Flower', cursive;
+.nav-link {
   font-size: 1.2em;
-  text-decoration: none;
-  color: #fff;
+  font-family: 'Cabin Sketch', cursive;
 }
 
-.name {
-  transition: color .5s;
-  font-family: 'Indie Flower', cursive;
-  color: #fff;
-  font-size: 1.5em;
+.rainbow {
+   /* Font options */
+  font-family: 'Cabin Sketch', cursive;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 3s infinite;
+
+  /* Internet Explorer */
+  -ms-animation: rainbow 3s infinite;
+
+  /* Standar Syntax */
+  animation: rainbow 3s infinite;
 }
 
-.main-nav a:hover, .name:hover {
-  color: #ffc107;
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+  0%{color: orange;}
+  10%{color: purple;}
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	100%{color: blue;}
+	100%{color: orange;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+  0%{color: orange;}
+  10%{color: purple;}
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	100%{color: blue;}
+	100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+  0%{color: orange;}
+  10%{color: purple;}
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	100%{color: blue;}
+	100%{color: orange;}
 }
 
 /* =====================================
    Main Content
 ======================================== */
 
+.about-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 25px;
+}
+
+.parallax {
+  /* min-width: 500px; */
+  padding: 100px 35px;
+  background: transparent;
+}
+
+.info {
+  z-index: 2;
+  position: relative;
+  color: white;
+}
 
 #contact img {
   transition: transform .7s;
@@ -154,7 +224,7 @@ ul.skills {
 }
 
 .contact-me strong, .about-me strong {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Cabin Sketch', cursive;
   font-size: 1.2em;
   color: #fff;
 }
@@ -165,28 +235,6 @@ ul.skills {
 ======================================== */
 
 @media (min-width: 768px) {
-
-  /* =====================================
-     Navigation
-  ======================================== */
-
-  .main-nav {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .nav-item {
-    display: inline-block;
-
-  }
-
-  .main-nav a {
-    font-size: 1.4em;
-  }
-
-  .item-1 {
-    margin-right: 2em;
-  }
 
   /* =====================================
      Header
@@ -201,13 +249,26 @@ ul.skills {
   }
 
   /* =====================================
+     Header
+  ======================================== */
+
+  .navbar-brand {
+    font-size: 2.5em;
+    padding-left: 0.5em;
+  }
+
+  .explain {
+    font-size: 1.2em;
+    margin-right: 10em;
+  }
+
+  /* =====================================
      Main Content
   ======================================== */
 
   .contact-me p, .about-me strong {
     font-size: 1.3em;
   }
-
 }
 
 @media (min-width: 1024px) {
@@ -215,8 +276,20 @@ ul.skills {
      Header
   ======================================== */
 
-  .main-header {
-    height: 100vh;
+  .nav-link {
+    margin-right: 1.5em;
+  }
+
+  .front-page {
+    padding-left: 8em;
+  }
+
+  .wrap {
+    font-size: 2em;
+  }
+
+  .explain {
+    margin-right: 16em;
   }
 
   #contact img {

@@ -1,0 +1,18 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  font-size: 24px;
+  padding: 25px;
+}
+.parallax {
+  min-width: 500px;
+  /* min-height: 500px; */
+  padding: 100px 35px;
+  background: transparent;
+}
+.info {
+  z-index: 2;
+  position: relative;
+  color: white;
+}
