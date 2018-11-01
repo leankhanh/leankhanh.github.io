@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  text-align: center;
+  /* text-align: center; */
   line-height: 1.5;
 }
 
@@ -133,6 +133,28 @@ main {
    Main Content
 ======================================== */
 
+/* .about-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 25px;
+} */
+
+/* .parallax {
+  background: url('../images/street.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+} */
+
+/* .info {
+  z-index: 2;
+  position: relative;
+  color: white;
+} */
+
 .about-container {
   width: 100vw;
   height: 100vh;
@@ -143,15 +165,17 @@ main {
 
 .parallax {
   /* min-width: 500px; */
+  height: 100vh;
   padding: 100px 35px;
   background: transparent;
 }
 
-.info {
+/* .info {
   z-index: 2;
   position: relative;
+  margin: auto;
   color: white;
-}
+} */
 
 #contact img {
   transition: transform .7s;
