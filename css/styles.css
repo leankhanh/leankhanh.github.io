@@ -2,10 +2,13 @@
    Page Styles
 ======================================== */
 
-body {
+body, html {
   font-family: 'Josefin Sans', sans-serif;
-  /* text-align: center; */
-  line-height: 1.5;
+  text-align: center;
+  line-height: 1.8;
+  margin: 0;
+  height: 100%;
+  background-color: #f4f4f4;
 }
 
 a {
@@ -18,23 +21,15 @@ footer {
 
 main {
   margin-bottom: 180px;
-  margin-top: 180px;
+  margin-top: 100px;
 }
 
 /* =====================================
    Header
 ======================================== */
 
-.main-header {
-  display: flex;
-  flex-direction: column;
-  background-color: #150c14;
-  height: 100vh;
-}
-
 .front-page {
   max-width: 1122px;
-  margin: auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
   text-align: left;
@@ -42,13 +37,13 @@ main {
 
 .wrap {
   font-family: 'Fredericka the Great', cursive;
-  font-size: 1.5em;
-  color: #ffc107;
+  font-size: 1.3em;
+  color: #000;
 }
 
 .explain p {
   font-family: 'Cabin Sketch', cursive;
-  color: #fff;
+  color: #000;
   font-size: 1.1em;
   margin-top: 2em;
   margin-bottom: 3em;
@@ -57,12 +52,12 @@ main {
 }
 
 .explain a {
-  color: #ffc107;
+  color: #36a566;
 }
 
-.btn {
-  background-color: #150c14;
-  color: #ffc107;
+.btn-dark {
+  background-color: transparent;
+  color: #000;
   font-family: 'Cabin Sketch', cursive;
   font-size: 1.2em;
   padding: 0.5em;
@@ -133,49 +128,58 @@ main {
    Main Content
 ======================================== */
 
-/* .about-container {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  font-size: 24px;
-  padding: 25px;
-} */
-
-/* .parallax {
-  background: url('../images/street.jpg') no-repeat center;
+.pimg1, .pimg2 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  /*
+    fixed = parallax
+    scroll = normal
+  */
   background-attachment: fixed;
-  height: 100vh;
-  width: 100vw;
-} */
-
-/* .info {
-  z-index: 2;
-  position: relative;
-  color: white;
-} */
-
-.about-container {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  font-size: 24px;
-  padding: 25px;
 }
 
-.parallax {
-  /* min-width: 500px; */
-  height: 100vh;
-  padding: 100px 35px;
-  background: transparent;
+.pimg1 {
+  background-image: url('../images/mountain.jpeg');
+  min-height: 100%;
 }
 
-/* .info {
-  z-index: 2;
-  position: relative;
+.pimg2 {
+  background-image: url('../images/toronto.jpg');
+  min-height: 70%;
+}
+
+.ptext {
+  position:absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light{
+  background-color: #f4f4f4;
+  color: #666;
+  /* text-align: left; */
+}
+
+.section-dark{
+  background-color: #282e34;
+  color: #ddd;
+  padding: 6em 0;
+}
+
+.section p {
+  max-width: 768px;
   margin: auto;
-  color: white;
-} */
+  text-align: left;
+}
 
 #contact img {
   transition: transform .7s;
@@ -243,11 +247,7 @@ ul.skills {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.about-me a {
-  color: #ffc107;
-}
-
-.contact-me strong, .about-me strong {
+.contact-me strong {
   font-family: 'Cabin Sketch', cursive;
   font-size: 1.2em;
   color: #fff;
@@ -257,6 +257,12 @@ ul.skills {
 /* =====================================
    Media Queries
 ======================================== */
+
+@media (max-width:568px) {
+  .pimg1, .pimg2, .pimg3 {
+    background-attachment: scroll;
+  }
+}
 
 @media (min-width: 768px) {
 
@@ -290,7 +296,11 @@ ul.skills {
      Main Content
   ======================================== */
 
-  .contact-me p, .about-me strong {
+  .section p {
+    font-size: 1.2em;
+  }
+
+  .contact-me p {
     font-size: 1.3em;
   }
 }
@@ -321,12 +331,34 @@ ul.skills {
     height: 50px;
   }
 
-  .about-me {
-    padding-left: 4em;
+  .section p {
+    font-size: 1.4em;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1200px) {
+  .ptext{
+    left: 10%;
   }
 
-  .contact-me {
-    padding-right: 4em;
+  .navbar-brand {
+    font-size: 3em;
   }
 
+  .nav-link {
+    font-size: 1.5em;
+    font-family: 'Cabin Sketch', cursive;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1800px) {
+  .ptext{
+    left: 20%;
+  }
+
+  .section-dark{
+    padding: 8em 0;
+  }
 }

@@ -7,61 +7,60 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Fredericka+the+Great|Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="parallax.min.js"></script>
   </head>
 
   <body>
-    <header class="main-header" id="home">
-      <nav class="navbar navbar-expand-md fixed-top navbar-dark" style="background-color: #150c14;">
-          <a href="#" class="navbar-brand rainbow">An Le An</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar7">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="navbar-collapse collapse justify-content-stretch" id="navbar7">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Work</a>
-                  </li>
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Contact</a>
-                  </li>
-              </ul>
-          </div>
-      </nav>
-      <div class="front-page">
-          <h1 class="wrap typewrite" data-period="2000" data-type='[ "Hi, My name is Ken.", "I Love Creating Websites." ]'></h1>
-          <div class="explain">
-            <p>I'm a sophomore <a href="https://www.ryerson.ca/programs/undergraduate/computer-science/" target="_blank">Computer Science</a>
-              student based in Toronto, ON and I'm interested in designing and developing responsive websites.
-            </p>
-          </div>
-          <a href="mailto:leankhanh98@gmail.com"><button type="button" class="btn btn-warning">Say Hello!</button></a>
+    <header class="pimg1" id="home">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a href="#" class="navbar-brand rainbow">An Le An</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar7">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse justify-content-stretch" id="navbar7">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="#">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="#">Work</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+          <div class="ptext">
+            <span class="border">
+              <div class="front-page">
+                  <h1 class="wrap typewrite" data-period="2000" data-type='[ "Hi, My name is Ken.", "I Love Creating Websites." ]'></h1>
+                  <div class="explain">
+                    <p>I'm a sophomore <a href="https://www.ryerson.ca/programs/undergraduate/computer-science/" target="_blank">Computer Science</a>
+                      student based in Toronto and I'm interested in designing and developing responsive websites.
+                    </p>
+                  </div>
+                  <a href="mailto:leankhanh98@gmail.com"><button type="button" class="btn btn-dark">Say Hello!</button></a>
+              </div>
+          </span>
       </div>
     </header>
 
-    <!-- <div class="about-container">
-      <div class="parallax">
-        <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    </div> -->
+    <section class="section section-light">
+    <h2>About Me</h2>
+    <p>Hi there! My name is Ken, and I enjoy exercising, a long walk on the beach and romantic movies.</p>
+    <p>Just kidding! I'm not a fan of any of those things.
+      More seriously, I'm interested in working at the intersection of engineering and designing. I build beautiful websites that provide
+      the best user experience while being very efficient. I'm constanly learning and improving my skills along with the latest technologies
+      that keep evolving in web development.
+    </p>
+  </section>
 
-    <div class="about-container">
-     <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/street.jpg">
-       <!-- <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-       </p> -->
-     </div>
-   </div>
+    <div class="pimg2">
+    </div>
+
+    <section class="section section-dark">
+      <h2>Some Things I've Built</h2>
+    </section>
 
     <main class="container" id="work">
 
@@ -145,14 +144,9 @@
 
     </main> <!-- /.container -->
 
-    <footer class="container-fluid py-4 mt-5"> <!-- footer -->
+    <footer class="container-fluid py-4 mt-5">
       <div class="row">
-        <div class="col-md col-xl-4 about-me">
-          <p><strong>About Me</strong></p>
-          <p class="text-light">I'm a front-end web developer, designer, and senior <a href="https://www.ryerson.ca/programs/undergraduate/computer-science/" target="_blank">Computer Science</a> student.
-            I enjoy creating and designing responsive website.</p>
-        </div>
-        <div class="col-md col-xl-4 ml-auto contact-me">
+        <div class="col-sm col-xl-4 ml-auto mr-auto contact-me">
           <p><strong>Get In Touch With Me</strong></p>
           <div class="input-group d-flex flex-row justify-content-around" id="contact">
             <a href="mailto:leankhanh98@gmail.com"><img src="images/email.svg" alt="Email"></a>
@@ -162,7 +156,7 @@
           </div>
         </div>
       </div>
-    </footer> <!-- /footer -->
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
