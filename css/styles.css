@@ -52,7 +52,7 @@ main {
 }
 
 .explain a {
-  color: #36a566;
+  color: #1F7D92;
 }
 
 .btn-dark {
@@ -130,20 +130,16 @@ main {
 
 .pimg1, .pimg2 {
   position: relative;
-  opacity: 0.70;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /*
-    fixed = parallax
-    scroll = normal
-  */
   background-attachment: fixed;
 }
 
 .pimg1 {
-  background-image: url('../images/mountain.jpeg');
+  background-image: url('../images/draw.jpg');
   min-height: 100%;
+  opacity: 0.8;
 }
 
 .pimg2 {
@@ -166,7 +162,6 @@ main {
 .section-light{
   background-color: #f4f4f4;
   color: #666;
-  /* text-align: left; */
 }
 
 .section-dark{
@@ -258,7 +253,7 @@ ul.skills {
    Media Queries
 ======================================== */
 
-@media (max-width:568px) {
+@media (max-width: 568px) {
   .pimg1, .pimg2, .pimg3 {
     background-attachment: scroll;
   }
@@ -355,7 +350,7 @@ ul.skills {
 /* Large screens ----------- */
 @media only screen  and (min-width : 1800px) {
   .ptext{
-    left: 20%;
+    top: 25%;
   }
 
   .section-dark{
